@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main id="main" class="main">
+      <h2 class="table-title">
+        <a routerLink="/newleads"
+          ><fa-icon [icon]="faAngleLeft"></fa-icon>
+          <fa-icon
+            id="faIconArrow"
+            style="float: right"
+            [icon]="faShareAlt"
+          ></fa-icon>
+          &nbsp;
+          <fa-icon
+            style="float: right; color: green"
+            [icon]="faWhatsapp"
+          ></fa-icon>
+        </a>
+        <b>CG Protect Form</b>
+      </h2>
+      <mat-horizontal-stepper
+        [linear]="isLinear"
+        #stepper="matHorizontalStepper"
+      >
+        <mat-step [stepControl]="firstFormGroup">
+          <form class="form" [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>PERSONAL DETAILS</ng-template>
+            <div>
+              <label for="fname"><strong>First Name</strong></label>
+              <label class="mat-form-inside-lebel-lastName"
+                ><strong>Last Name</strong></label
+              >
+            </div>
+            <div class="input-container">
+              <input
+                name="fName"
+                id="fnameInput"
+                class="form-control"
+                formControlName="fName"
+                required
+                [ngClass]="{
+                  error:
+                    firstFormGroup.controls['fName'].errors &&
+                    (firstFormGroup.controls['fName'].touched ||
+                      firstFormGroup.controls['fName'].dirty)
+                }"
+                style="text-align: left"
+              />
+
+              <input
+                name="lName"
+                id="lnameInput"
+                class="form-control"
+                formControlName="lName"
+                required
+                [ngClass]="{
+                  error:
+                    firstFormGroup.controls['lName'].errors &&
+                    (firstFormGroup.controls['lName'].touched ||
+                      firstFormGroup.controls['lName'].dirty)
+                }"
+                style="text-align: left"
+              />
+            </div>
+            <div>
+              <label><strong>Phone Number</strong></label>
+              <label class="mat-form-inside-lebel-email"
+                ><strong>Email</strong></label
+              >
+            </div>
+            <div class="input-container">
+              <input
+                name="phone"
+                id="phoneInput"
+                class="form-control"
+                formControlName="contact"
+                required
+                [ngClass]="{
+                  error:
+                    firstFormGroup.controls['contact'].errors &&
+                    (firstFormGroup.controls['contact'].touched ||
+                      firstFormGroup.controls['contact'].dirty)
+                }"
+                style="text-align: left"
+              />
+
+              <input
+                name="email"
+                id="emailInput"
+                class="form-control"
+                formControlName="email"
+                required
+                [ngClass]="{
+                  error:
+                    firstFormGroup.controls['email'].errors &&
+                    (firstFormGroup.controls['email'].touched ||
+                      firstFormGroup.controls['email'].dirty)
+                }"
+                style="text-align: left"
+              />
+            </div>
+            <div>
+              <label><strong>Date of Birth</strong></label>
+              <label class="mat-form-inside-lebel-pinCode"
+                ><strong>Pincode</strong></label
+              >
+            </div>
+            <div class="input-container">
+              <input
+                name="dob"
+                type="date"
+                id="dobInput"
+                class="form-control"
+                formControlName="birthDate"
+                required
+                [ngClass]="{
+                  error:
+                    firstFormGroup.controls['birthDate'].errors &&
+                    (firstFormGroup.controls['birthDate'].touched ||
+                      firstFormGroup.controls['birthDate'].dirty)
+                }"
+                style="text-align: left"
+              />
+
+              <input
+                name="pincode"
+                id="pinInput"
+                class="form-control"
+                formControlName="pincode"
+                required
+                [ngClass]="{
+                  error:
+                    firstFormGroup.controls['pincode'].errors &&
+                    (firstFormGroup.controls['pincode'].touched ||
+                      firstFormGroup.controls['pincode'].dirty)
+                }"
+                style="text-align: left"
+              />
+            </div>
+            <div>
+              <label><strong>Gender</strong></label>
+            </div>
+            <input
+              type="radio"
+              id="gender"
+              value="male"
+              name="gender"
+              required
+              formControlName="gender"
+              [ngClass]="{
+                error:
+                  firstFormGroup.controls['gender'].errors &&
+                  (firstFormGroup.controls['gender'].touched ||
+                    firstFormGroup.controls['gender'].dirty)
+              }"
+            />
+            <label id="genderLebel">Male</label>
+            <input
+              type="radio"
+              id="gender"
+              value="female"
+              name="gender"
+              required
+              formControlName="gender"
+              [ngClass]="{
+                error:
+                  firstFormGroup.controls['gender'].errors &&
+                  (firstFormGroup.controls['gender'].touched ||
+                    firstFormGroup.controls['gender'].dirty)
+              }"
+            />
+            <label id="genderLebel">Female</label>
+            <input
+              type="radio"
+              id="gender"
+              value="transgender"
+              name="gender"
+              required
+              formControlName="gender"
+              [ngClass]="{
+                error:
+                  firstFormGroup.controls['gender'].errors &&
+                  (firstFormGroup.controls['gender'].touched ||
+                    firstFormGroup.controls['gender'].dirty)
+              }"
+            />
+            <label id="genderLebel">Transgender</label>
+            <div>
+              <label><strong>Do you Smoke?</strong></label>
+              <label class="mat-form-inside-lebel-lastName"
+                ><strong>Do you consume alcohol?</strong></label
+              >
+            </div>
+            <div class="input-container">
+              <input
+                value="Yes"
+                type="button"
+                id="smoke-yes"
+                (click)="onSmokeButtonClick(true)"
+                class="btn btn-primary btn-sm border border-info"
+              />
+              <input
+                type="button"
+                value="No"
+                id="smoke-no"
+                (click)="onSmokeButtonClick(false)"
+                class="btn btn-light btn-sm border border-info"
+              />
+
+              <br />&nbsp;
+              <input
+                type="button"
+                value="Yes"
+                id="alcohol-yes"
+                (click)="onAlcoholButtonClick(true)"
+                class="btn btn-primary btn-sm border border-info"
+              />
+
+              <input
+                type="button"
+                value="No"
+                id="alcohol-no"
+                (click)="onAlcoholButtonClick(false)"
+                class="btn btn-light btn-sm border border-info"
+              />
+            </div>
+            <div>
+              <label><strong>Address</strong></label>
+            </div>
+            <div class="input-group">
+              <textarea
+                name="address"
+                class="input-group-text"
+                formControlName="address"
+                required
+                [ngClass]="{
+                  error:
+                    firstFormGroup.controls['address'].errors &&
+                    (firstFormGroup.controls['address'].touched ||
+                      firstFormGroup.controls['address'].dirty)
+                }"
+              ></textarea>
+            </div>
+            <label><strong>Add Dependants</strong></label>
+            <br />
+            <div class="cardCreate">
+              <div class="card">
+                <div class="card-body" id="firstCrd">
+                  <fa-icon [icon]="faChildren" size="lg"></fa-icon>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body" id="firstCrd">
+                  <fa-icon [icon]="faPersonDress" size="lg"></fa-icon>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body" id="firstCrd">
+                  <fa-icon [icon]="faPerson" size="lg"></fa-icon>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body" id="firstCrd">
+                  <fa-icon [icon]="faBaby" size="lg"></fa-icon>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body" id="firstCrd">
+                  <i class="fa-solid fa-house-chimney-window"></i>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="bottomDiv" class="fixed-bottom">
+                <button
+                  class="incomeBack btn btn-primary wish-btn"
+                  (click)="saveEMPFirstFormGroup()"
+                  matStepperNext
+                >
+                  Next
+                </button>
+                <button class="incomeNext btn btn-secondary wish-btn">
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form class="form" [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>INCOME DETAILS</ng-template>
+            <div>
+              <div>
+                <label><strong>Anual Income</strong></label>
+              </div>
+              <div class="input-container">
+                <input
+                  type="date"
+                  id="fnameInput"
+                  class="form-control"
+                  formControlName="anualIncome"
+                  required
+                  [ngClass]="{
+                    error:
+                      secondFormGroup.controls['anualIncome'].errors &&
+                      (secondFormGroup.controls['anualIncome'].touched ||
+                        secondFormGroup.controls['anualIncome'].dirty)
+                  }"
+                  style="text-align: left"
+                />
+              </div>
+            </div>
+            <br />
+            <div>
+              <label><strong>Goverment Rebate</strong></label>
+            </div>
+            <div class="input-container">
+              <input
+                id="fnameInput"
+                class="form-control"
+                formControlName="govRebate"
+                required
+                [ngClass]="{
+                  error:
+                    secondFormGroup.controls['govRebate'].errors &&
+                    (secondFormGroup.controls['govRebate'].touched ||
+                      secondFormGroup.controls['govRebate'].dirty)
+                }"
+                style="text-align: left"
+              />
+            </div>
+            <br />
+            <div>
+              <label><strong>Tax Rebate</strong></label>
+            </div>
+            <div class="input-container">
+              <input
+                id="fnameInput"
+                class="form-control"
+                formControlName="taxRebate"
+                required
+                [ngClass]="{
+                  error:
+                    secondFormGroup.controls['taxRebate'].errors &&
+                    (secondFormGroup.controls['taxRebate'].touched ||
+                      secondFormGroup.controls['taxRebate'].dirty)
+                }"
+              />
+            </div>
+            <br />
+            <div>
+              <div id="bottomDiv" class="fixed-bottom">
+                <button
+                  class="incomeBack btn btn-primary wish-btn"
+                  (click)="saveEMPforSecondFormGroup()"
+                  matStepperNext
+                >
+                  Next
+                </button>
+                <button
+                  class="incomeNext btn btn-primary wish-btn"
+                  matStepperPrevious
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="thirdFormGroup">
+          <form class="form" [formGroup]="thirdFormGroup">
+            <ng-template matStepLabel>DOCUMENTS</ng-template>
+            <div id="yourProof">
+              <div>
+                <label><strong>Your Proof</strong></label>
+              </div>
+              <div>
+                <label><h3 class="fade">Upload Identity Proof</h3></label>
+                <label class="fincialProof"
+                  ><h3 class="fade">Upload Fincial Proof</h3></label
+                >
+              </div>
+              <div class="input-container">
+                <div class="upload-card">
+                  <label for="fileInput" class="upload-card-label"
+                    >Upload Document</label
+                  >
+                  <input type="file" id="fileInput" class="upload-card-input" />
+                  <p class="upload-card-info">
+                    Supported file formats: PDF, DOCX, TXT
+                  </p>
+                </div>
+                <div class="upload-card upload-card2">
+                  <label for="fileInput" class="upload-card-label"
+                    >Upload Document</label
+                  >
+                  <input type="file" id="fileInput" class="upload-card-input" />
+                  <p class="upload-card-info">
+                    Supported file formats: PDF, DOCX, TXT
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="bottomDiv" class="fixed-bottom">
+                <button
+                  class="incomeBack btn btn-primary wish-btn"
+                  (click)="stepper.next()"
+                >
+                  Next
+                </button>
+                <button
+                  class="incomeNext btn btn-primary wish-btn"
+                  matStepperPrevious
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <form id="form-card" class="form card">
+            <table>
+              <tr>
+                <td>
+                  <div class="div-card">
+                    <div style="margin-top: 15px" class="fade">
+                      Quotation Reference
+                      <br /><label for=""><strong>GRH/3345</strong></label>
+                    </div>
+                    <div id="div-card-premium" class="fade">
+                      Premium <br />
+                      <div class="div-card-premium">
+                        <strong><p>$70 per Week</p></strong>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="div-card">
+                    <div class="fade">
+                      Product <br /><label for=""
+                        ><strong>$200,000</strong></label
+                      >
+                    </div>
+                    <div id="div-card-suminsured" class="fade">
+                      Sum insured upto
+                      <br /><label for=""><Strong>CG Protect</Strong></label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><br /></td>
+              </tr>
+              <tr>
+                <td>
+                  <div id="wpCard">
+                    <div class="card wpcard" id="verification-card">
+                      <fa-icon
+                        class="faActualIcon"
+                        style="float: right; color: green"
+                        [icon]="faWhatsapp"
+                        size="lg"
+                      ></fa-icon>
+                    </div>
+                    &nbsp; &nbsp;
+                    <div class="card wpcard" id="verification-card">
+                      <fa-icon
+                        class="faActualIcon"
+                        id="faIconArrow"
+                        style="float: right"
+                        [icon]="faShareAlt"
+                      ></fa-icon>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <button
+              routerLink="/quotitationsummary"
+              class="btn btn-primary wish-btn"
+              id="view-benefits"
+            >
+              View Benefits
+            </button>
+          </form>
+          <br />
+
+          <form id="form-card" class="form card" [formGroup]="fourthFormGroup">
+            <ng-template matStepLabel>QUOTATION</ng-template>
+            <table style="margin-left: 50px; border: 5px; border-radius: 5px">
+              <tr>
+                <td>
+                  <div id="verification-card" class="card"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="application-div">
+                    <div class="row">
+                      <div class="col">
+                        <div class="fade">Applicatn's Name</div>
+                      </div>
+                      <div class="col">
+                        <div class="fade">Address</div>
+                      </div>
+                      <div class="col">
+                        <div class="fade">Email</div>
+                      </div>
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+                      <div class="col">
+                        <div>
+                          <p>{{ employee[0]?.name }}</p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div>{{ employee[0]?.address }}</div>
+                      </div>
+                      <div class="col">
+                        <div>{{ employee[0]?.email }}</div>
+                      </div>
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="fade">Phone Number</div>
+                      </div>
+                      <div class="col">
+                        <div class="fade">Gender</div>
+                      </div>
+                      <div class="col">
+                        <div class="fade">Consume Alcohol</div>
+                      </div>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                      <div class="col">
+                        <div>
+                          <p>{{ employee[0]?.contact }}</p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div>{{ employee[0]?.gender }}</div>
+                      </div>
+                      <div class="col">
+                        <div>{{ employee[0]?.alcohol }}</div>
+                      </div>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                      <div class="col">
+                        <div class="fade">Consumes Tobaco</div>
+                      </div>
+                      <div class="col">
+                        <div class="fade">AGE</div>
+                      </div>
+                      <div class="col">
+                        <div class="fade">DOB</div>
+                      </div>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                      <div class="col">
+                        <div>
+                          <p>{{ employee[0]?.smoke }}</p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div>{{ calculateAge() }}</div>
+                      </div>
+                      <div class="col">
+                        <div>{{ employee[0]?.birthDate }}</div>
+                      </div>
+                    </div>
+
+                    <br />
+                    <div id="bottomDiv" class="fixed-bottom">
+                      <button
+                        routerLink="/quotitationsummary"
+                        class="incomeBack btn btn-primary wish-btn"
+                        (click)="stepper.next()"
+                        style="
+                          width: 170px;
+                          display: inline;
+                          margin-left: 1040px;
+                        "
+                      >
+                        Send Payement Link
+                      </button>
+                      <button
+                        class="incomeNext btn btn-primary wish-btn"
+                        matStepperPrevious
+                      >
+                        Back
+                      </button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </main>
+  </body>
+</html>

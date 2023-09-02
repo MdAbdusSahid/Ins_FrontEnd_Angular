@@ -1,0 +1,340 @@
+#wpCard {
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 900px;
+}
+.wpcard {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#uw-status {
+  position: inherit;
+}
+.div-card {
+  position: relative;
+  display: inline-flex;
+  margin-left: 25px;
+}
+#div-card-suminsured {
+  margin-left: 850px;
+}
+#div-card-premium {
+  margin-left: 760px;
+  margin-top: 15px;
+}
+#view-benefits {
+  width: 130px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+#verification-card {
+  background-color: #cce1da;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 50%;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.div-card {
+  position: relative;
+  display: inline-flex;
+  margin-left: 25px;
+}
+.card {
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 10px;
+}
+.form {
+  margin-top: 10px;
+}
+mat-form-field {
+  width: 40%;
+}
+.mat-form-inside-lebel-lastName {
+  position: relative;
+  margin-left: 592px;
+}
+.mat-form-inside-lebel-email {
+  position: relative;
+  margin-left: 569px;
+}
+.mat-form-inside-lebel-pinCode {
+  position: relative;
+  margin-left: 582px;
+}
+
+.personal-details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+}
+input[type=""] .mat-form-field {
+  flex: 1;
+  margin-right: 10px;
+}
+.mat-form-field-margine {
+  margin-left: 200px;
+}
+
+.alchohol {
+  font-size: 16px;
+  height: 36px;
+  min-width: 64px;
+  padding: 0 16px;
+}
+#genderLebel {
+  position: relative;
+  top: -2px;
+  margin-left: -45px;
+  margin-right: 20px;
+}
+#gender {
+  position: unset;
+
+  margin-right: 50px;
+}
+#stepperDesign {
+  border: 2px solid black;
+}
+::ng-deep .mat-horizontal-stepper-header-container {
+  background-color: #2e4765 !important;
+  border-radius: 10px;
+  width: 100%;
+}
+::ng-deep .mat-step-text-label {
+  color: #fff;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+  background-color: #1babdb !important;
+
+  color: #fff !important;
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+  background-color: #f4f7fc;
+
+  color: #88909b;
+}
+
+::ng-deep .mat-horizontal-content-container {
+  background-color: #f6f9ff;
+}
+/* ::ng-deep .mat-horizontal-stepper-header-container {
+  position: none;
+} */
+#fnameInput {
+  width: 300px;
+}
+#lnameInput {
+  width: 300px;
+  margin-left: 370px;
+}
+#phoneInput {
+  width: 300px;
+}
+#emailInput {
+  width: 300px;
+  margin-left: 370px;
+}
+#dobInput {
+  width: 300px;
+}
+#pinInput {
+  width: 300px;
+  margin-left: 370px;
+}
+#alcohol-no {
+  width: 60px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 12px 6px;
+  margin-left: 763px;
+}
+#alcohol-yes {
+  width: 60px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 12px 6px;
+  margin-left: 585px;
+  margin-right: -750px;
+}
+#smoke-yes {
+  width: 60px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 12px 6px;
+}
+#smoke-no {
+  width: 60px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 12px 6px;
+}
+/* .card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  margin-right: 20px;
+} */
+/* .card-container {
+  display: flex;
+} */
+.card:last-child {
+  margin-right: 0;
+}
+.cardCreate {
+  display: inline-flex;
+}
+#spouseImg {
+  color: #2e4765;
+}
+#bottomDiv {
+  margin-left: 80px;
+  background-color: white;
+}
+.incomeBack {
+  width: 60px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 12px 6px;
+  margin-left: 1150px;
+  margin-right: -750px;
+}
+.incomeNext {
+  width: 60px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 12px 6px;
+  margin-left: -430px;
+  margin-right: -750px;
+}
+a {
+  text-decoration: none !important;
+}
+.upload-card {
+  border: 4px dashed #aaa;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  background-color: #f8f9fc;
+}
+
+.upload-card-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.upload-card-input {
+  /* display: none; */
+}
+
+.upload-card-info {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.upload-card2 {
+  margin-left: 500px;
+}
+.fincialProof {
+  position: relative;
+  margin-left: 645px;
+}
+.ng-template-class {
+  margin-top: 30px;
+}
+/* #form-card {
+  width: 104%;
+  margin-left: -2%;
+  position: relative;
+  height: 250px;
+} */
+.div-card {
+  position: relative;
+  display: inline-flex;
+  margin-left: 25px;
+}
+
+#div-card-premium {
+  margin-left: 55%;
+  margin-top: 15px;
+}
+#div-card-suminsured {
+  margin-left: 727px;
+  margin-top: 15px;
+}
+/* #div-card-address {
+  margin-left: 300px;
+}
+#div-card-email {
+  margin-left: 400px;
+}
+#div-card-gender {
+  margin-left: 320px;
+}
+#div-card-alcohole {
+  margin-left: 407px;
+}
+#div-card-age {
+  margin-left: 290px;
+}
+#div-card-dob {
+  margin-left: 430px;
+} */
+/* .card {
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 10px;
+} */
+.btn-sendpayement {
+  width: 170px;
+  margin-left: 1062px;
+}
+.btn-sendpayementback {
+  margin-right: 100px;
+}
+#bottomDiv-sendpayement {
+  display: inline;
+}
+.fade:not(.show) {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+.error {
+  border: 1px solid red;
+}
+
+#div-card-suminsured {
+  margin-left: 850px;
+}
+#div-card-premium {
+  margin-left: 760px;
+  margin-top: 15px;
+}
+#view-benefits {
+  width: 130px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+#verification-card.card {
+  display: none;
+}

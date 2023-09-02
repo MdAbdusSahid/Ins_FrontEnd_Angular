@@ -1,0 +1,25 @@
+/* #main{
+  
+    padding:40px 40px;
+    margin-left: 200px;
+    
+
+}
+
+@media (max-width: 1199px) {
+
+    #main {
+    padding: 40px;
+    }
+    
+    } */
+
+.arrange{
+    margin-top: -14%;
+    margin-left: 100%;
+
+
+}
+.icon-img{
+    cursor: pointer;
+}

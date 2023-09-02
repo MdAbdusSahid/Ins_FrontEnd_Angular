@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"path": "../../.."
+	}
+],
+  "settings": {
+    "java.compile.nullAnalysis.mode": "automatic",
+    "liveServer.settings.multiRootWorkspaceName": "JS_9TH_March"
+  }
+}

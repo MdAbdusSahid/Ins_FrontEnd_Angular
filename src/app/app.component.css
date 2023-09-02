@@ -1,0 +1,9 @@
+body {
+  background: rgb(246, 249, 255);
+}
+span {
+  text-decoration: none !important;
+}
+.logo span:hover {
+  text-decoration: none !important;
+}

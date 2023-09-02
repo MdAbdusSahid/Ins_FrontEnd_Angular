@@ -1,0 +1,62 @@
+<main id="main" class="main">
+    <div class="col-100">
+        <h2 class="table-title"> <a routerLink="/dashboard"><fa-icon [icon]="faAngleLeft"></fa-icon></a><b> Total Applications</b></h2>
+
+        <div class="filter">
+            <select class="table-drop" name="dropdown" id="filter">&nbsp;&nbsp;
+               <option value="All Policies">All Policies</option>
+               <option value="Health">Health</option>
+               <option value="Documents">Documents</option>
+               <option value="Gallery">Gallery</option>&nbsp;&nbsp;
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;
+   
+            <select class="table-drop" name="dropdown" id="filter">&nbsp;&nbsp;
+               <option value="All Policies">All Policies</option>
+               <option value="Health">Health</option>
+               <option value="Documents">Documents</option>
+               <option value="Gallery">Gallery</option>&nbsp;&nbsp;
+            </select>
+            &nbsp;
+
+            <button type="button" class="btn btn-outline-info ">UV Progress</button> &nbsp;
+            <button type="button" class="btn btn-outline-info ">Submitted</button>  &nbsp;  
+
+            <button type="button" class="btn btn-outline-info ">Customer To Confirm</button>    
+
+                </div>
+
+            <br>
+        <div class="card recent-sales overflow-auto">
+            <div class="card-bod">
+    
+    <table class="table table-borderless datatable">
+        <thead>
+           <tr>
+              <th scope="col" >  Policy Owner</th>
+              <th scope="col">Life Insured</th>
+              <th scope="col">Prd Type</th>
+              <th scope="col">Application No.</th>
+              <th scope="col">Date</th>
+              <th scope="col">SA</th>
+              <th scope="col">status</th>
+
+           </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of apidata">
+                <td><a routerLink="/applicationdetails" (click)="select(data.Policy_Owner)">{{data.Policy_Owner}}</a></td>
+                <td>{{data.life_insured}}</td>
+                <td>{{data.prd_type}}</td>
+                <td>{{data.application_no}}</td>
+                <td>{{data.date}}</td>
+                <td>{{data.SA}}</td>
+                <td>{{data.status}}</td>
+            </tr>
+           
+          
+           </tbody>
+           </table>
+           </div>
+           </div>
+           </div>
+</main>

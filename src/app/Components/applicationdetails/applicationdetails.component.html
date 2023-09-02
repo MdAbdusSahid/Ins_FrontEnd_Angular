@@ -1,0 +1,19 @@
+<main id="main" class="main">
+    <h2 class="table-title"> <a routerLink="/viewall"><fa-icon [icon]="faAngleLeft"></fa-icon> </a><b> application details</b></h2>
+
+    <div class="card">
+        <div class="card-header" style="background-color: #2E4765;" >
+            <h1 style="color:white"><b>John Smith</b><fa-icon [icon]="faPencil"class="in" ></fa-icon> <fa-icon class="inn" [icon]="faPhone" ></fa-icon><fa-icon class="inn" [icon]="faEnvelope"></fa-icon> </h1>
+            <h4>9824042777</h4>
+        </div>
+        <div class="card-body">
+           <h5 class="card-title">Product Name</h5>
+          <table>
+            <tr *ngFor="let data of newdata">
+                <td>{{data.Policy_Owner}}</td>
+            </tr>
+          </table>
+        </div>
+        </div>
+        
+</main>

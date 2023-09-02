@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="main">
+      <h2 class="table-title">
+        <a routerLink="/newleads"><fa-icon [icon]="faAngleLeft"></fa-icon> </a>
+        <b>Quotation Summary</b>
+      </h2>
+      <div>
+        <form id="form-card" class="form card">
+          <table>
+            <tr>
+              <td>
+                <div class="div-card">
+                  <div style="margin-top: 15px" class="fade">
+                    Quotation Reference
+                    <br /><label for=""><strong>GRH/3345</strong></label>
+                  </div>
+                  <div id="div-card-premium" class="fade">
+                    Premium <br />
+                    <div class="div-card-premium">
+                      <strong><p>$70 per Week</p></strong>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><hr /></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="div-card">
+                  <div class="fade">
+                    Product <br /><label for=""
+                      ><strong>$200,000</strong></label
+                    >
+                  </div>
+                  <div id="div-card-suminsured" class="fade">
+                    Sum insured upto
+                    <br /><label for=""><Strong>CG Protect</Strong></label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><br /></td>
+            </tr>
+            <tr>
+              <td>
+                <div id="wpCard">
+                  <div class="card wpcard" id="verification-card">
+                    <fa-icon
+                      class="faActualIcon"
+                      style="float: right; color: green"
+                      [icon]="faWhatsapp"
+                      size="lg"
+                    ></fa-icon>
+                  </div>
+                  &nbsp; &nbsp;
+                  <div class="card wpcard" id="verification-card">
+                    <fa-icon
+                      class="faActualIcon"
+                      id="faIconArrow"
+                      style="float: right"
+                      [icon]="faShareAlt"
+                    ></fa-icon>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <button
+            routerLink="/quotitationsummary"
+            class="btn btn-primary wish-btn"
+            id="view-benefits"
+          >
+            View Benefits
+          </button>
+        </form>
+
+        <form id="form-card" class="form card">
+          <table>
+            <tr>
+              <td>
+                <div id="verification-card" class="card">
+                  <fa-icon
+                    class="fa-thin"
+                    id="faCircleCheck"
+                    [icon]="faCircleCheck"
+                    size="lg"
+                  ></fa-icon>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="application-div">
+                  <div class="row" id="faIcons">
+                    <div id="faIconCard" class="card">
+                      <fa-icon
+                        class="faActualIcon"
+                        id="faPenLine"
+                        [icon]="faPenLine"
+                      ></fa-icon>
+                    </div>
+                    <div id="faIconCard" class="card">
+                      <fa-icon
+                        class="faActualIcon"
+                        id="faPhoneVolume"
+                        [icon]="faPhoneVolume"
+                      ></fa-icon>
+                    </div>
+                    <div>
+                      <div id="faIconCard" class="card">
+                        <fa-icon
+                          class="faActualIcon"
+                          id="faEnvelope"
+                          [icon]="faEnvelope"
+                        ></fa-icon>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <strong>Application has been sent for review.</strong>
+                    <div>
+                      You will receive a notification once the application is
+                      reviewed.
+                    </div>
+                  </div>
+                  <br />
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="fade">Application no</div>
+                    </div>
+                    <div class="col">
+                      <div>
+                        <strong
+                          ><p>{{ randomNumber }}</p></strong
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <br />
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="fade">Product Name</div>
+                    </div>
+                    <div class="col">
+                      <div>
+                        <strong><p>CG Protect</p></strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br />
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="fade">Applicant's Name</div>
+                    </div>
+                    <div class="col">
+                      <div>
+                        <strong
+                          ><p>{{ emp[0].name }}</p></strong
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="fade">Address</div>
+                    </div>
+                    <div class="col">
+                      <div>
+                        <strong
+                          ><p>{{ emp[0].address }}</p></strong
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="fade">Email</div>
+                    </div>
+                    <div class="col">
+                      <div>
+                        <strong
+                          ><p>{{ emp[0].email }}</p></strong
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="fade">Applicant's Name</div>
+                    </div>
+                    <div class="col">
+                      <div
+                        style="
+                          padding: 10px;
+                          margin-right: 425px;
+                          color: white;
+                          background-color: #ffbe0f;
+                          border: 10px;
+                          border-radius: 5px;
+                        "
+                      >
+                        <strong>UW Process</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br />
+                  <!-- <div class="fade">Submission Date</div>
+                  <div>
+                    <strong
+                      ><p>{{ today | date }}</p></strong
+                    >
+                  </div> -->
+                  <div class="row">
+                    <div class="col">
+                      <div class="fade">Submission Date</div>
+                    </div>
+                    <div class="col">
+                      <div>
+                        <strong
+                          ><p>{{ today | date }}</p></strong
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

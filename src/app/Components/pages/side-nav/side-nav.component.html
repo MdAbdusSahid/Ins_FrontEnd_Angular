@@ -1,0 +1,32 @@
+<div
+  class="sidenav"
+  [ngClass]="collapsed ? 'sidenav-collapsed' : ''"
+  style="margin-top: 60px"
+>
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapse()">
+      <img
+        src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/24AEDC/external-left-arrow-arrows-dreamstale-lineal-dreamstale-15.png"
+      />
+    </button>
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a class="sidenav-nav-link">
+        <i
+          class="sidenav-link-icon"
+          [class]="data.icon"
+          [routerLink]="data.routerLink"
+        ></i>
+        <span
+          class="sidenav-link-text"
+          @fadeInOut
+          *ngIf="collapsed"
+          [routerLink]="data.routerLink"
+        >
+          {{ data.label }}
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>

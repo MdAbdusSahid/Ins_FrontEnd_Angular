@@ -1,0 +1,14 @@
+.inn{
+    height: 100px;
+    width: 250px;
+} 
+
+.inn-tmp{
+    height: 200px;
+    width: 400px;
+}
+
+#inside{
+    height:2px;
+    width: 3px;
+}

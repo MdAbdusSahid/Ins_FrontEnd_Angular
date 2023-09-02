@@ -1,0 +1,29 @@
+.tp-section {
+    display: flex;
+        align-content: center;
+        align-items: center;
+        height: 60px;
+                }
+        .tp-margin {
+        margin: 0 10px;
+        }
+                .progress-card{
+        width: 500px;
+       }
+           .progress-container{
+        display: flex;
+        flex-direction: row;
+    justify-content: space-between;
+     align-items: center;
+                }
+              ::ng-deep .matProgress .mat-mdc-progress-bar{
+    
+    --mdc-linear-progress-active-indicator-color: red;
+    
+    }
+             ::ng-deep .matProgress1 .mat-mdc-progress-bar{
+        --mdc-linear-progress-active-indicator-color: rgb(69, 227, 101);
+        }
+                 ::ng-deep .matProgress2 .mat-mdc-progress-bar{
+        --mdc-linear-progress-active-indicator-color: rgb(234, 232, 90);
+        }

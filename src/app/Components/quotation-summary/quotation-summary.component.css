@@ -1,0 +1,92 @@
+.card {
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 10px;
+}
+.fade {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+.no-fade {
+  opacity: none;
+  transition: opacity none;
+}
+.div-card {
+  position: relative;
+  display: inline-flex;
+  margin-left: 25px;
+}
+#div-card-suminsured {
+  margin-left: 850px;
+}
+#div-card-premium {
+  margin-left: 760px;
+  margin-top: 15px;
+}
+#view-benefits {
+  width: 130px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+#verification-card {
+  background-color: #cce1da;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 50%;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.card-container {
+  display: inline;
+}
+.application-div {
+  margin-top: -76px;
+  margin-left: 100px;
+}
+#faCircleCheck {
+  position: absolute;
+  margin-left: -4px;
+  margin-top: -7px;
+  font-size: 30px;
+  font-weight: 200px;
+}
+#faIcons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 750px;
+  margin-top: -30px;
+}
+#faIconCard {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 0.1px solid;
+  border-radius: 50%;
+  margin-left: 25px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.faActualIcon {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+.row {
+  --bs-gutter-x: 0.5rem;
+  margin-bottom: 20px;
+}
+#wpCard {
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 900px;
+}
+.wpcard {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#uw-status {
+  position: inherit;
+}

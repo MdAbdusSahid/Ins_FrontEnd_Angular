@@ -1,0 +1,59 @@
+<main id="main" class="main">
+  <div class="col-12">
+    <h2 class="table-title">
+      <a routerLink="/dashboard"><fa-icon [icon]="faAngleLeft"></fa-icon> </a
+      ><b> New Leads</b>
+    </h2>
+    <div class="filter">
+      <select class="table-drop" name="dropdown" id="filter">
+        &nbsp;&nbsp;
+        <option value="All Policies">All Policies</option>
+        <option value="Health">Health</option>
+        <option value="Documents">Documents</option>
+        <option value="Gallery">Gallery</option>
+        &nbsp;&nbsp;</select
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <!-- <select class="table-drop" name="dropdown" id="filter">&nbsp;&nbsp;
+            <option value="All Policies">All Policies</option>
+            <option value="Health">Health</option>
+            <option value="Documents">Documents</option>
+            <option value="Gallery">Gallery</option>&nbsp;&nbsp;
+         </select> -->
+
+      <button routerLink="/newleadform" class="btn btn-light wish-btn">
+        add new lead
+      </button>
+    </div>
+
+    <br />
+
+    <div class="card recent-sales overflow-auto">
+      <div class="card-bod">
+        <table class="table table-stripped table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Last Contacted</th>
+              <th scope="col">Email</th>
+              <th scope="col">contact</th>
+              <th scope="col">Lead Stage</th>
+              <th scope="col">Birth Date</th>
+            </tr>
+          </thead>
+          <tr *ngFor="let object of allEmloyees">
+            <td>{{ object.name }}</td>
+            <td>{{ object.lastConnected }}</td>
+            <td>{{ object.email }}</td>
+            <td>{{ object.contact }}</td>
+            <td>{{ object.leadStage }}</td>
+            <td>{{ object.birthDate }}</td>
+            <td style="color: lightgreen">{{ object.leadStage }}</td>
+            <td style="color: lightskyblue"><i class="bi bi-envelope"></i></td>
+          </tr>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

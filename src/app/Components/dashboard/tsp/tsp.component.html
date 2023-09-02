@@ -1,0 +1,90 @@
+<!-- <div class="col-lg-16">
+
+<div class="card">
+    <div class="card-body">
+       <h1 class="card-title">Top Selling Products</h1>
+       
+       <div class="progress">
+       
+     
+         <label>Health Protect Plus</label>
+    
+        <div class="progress-bar" role="progressbar" style="width: 60px" aria-valuenow="5" aria-valuemin="0" aria-valuemax="50" ></div>
+        <label>450 sold</label>  
+    </div>
+       <div class="progress mt-4">
+        <label>Covid Shield Plus</label>
+          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          <label>430 sold</label>
+         
+       </div>
+       <div class="progress mt-3">
+          <label>CG Term Life</label>
+          <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          <label>340 sold</label>
+       
+        </div>
+       
+      
+    </div>
+ </div> 
+ -->
+
+
+
+ <div class="col-lg-12">
+
+ <div class="row">
+   <div class="card">
+      <div class="card-body">
+
+   <h4><b>Top selling products</b></h4>
+   <h5 class="card-subtitle mb-1">
+     <section class = "tp-section matProgress">
+     <label class = "tp-margin" style="width: 166px; text-decoration: solid;">
+       Health Protect Plus</label>
+     <mat-progress-bar
+        mode = "determinate"
+        [value] = "value1"
+        [bufferValue] = "bufferValue1"
+        style="width:250px;"
+        >
+     </mat-progress-bar>
+     <label style="width:85px">&nbsp;&nbsp;566 sold</label>
+   </section>
+ </h5>
+
+ <h5 class="card-subtitle mb-2 text-muted">
+   <section class = "tp-section matProgress1">
+   <label class = "tp-margin" style="width: 127px;">{{name2}}</label>
+   <mat-progress-bar
+      class = "tp-margin"
+      mode = "determinate"
+      [value] = "value2"
+      [bufferValue] = "bufferValue2"
+      style="width:204px"
+      >
+   </mat-progress-bar>
+   <label style="width:64px">566 sold</label>
+ </section>
+</h5>
+
+<h5 class="card-subtitle mb-2 text-muted">
+ <section class = "tp-section matProgress2">
+ <label class = "tp-margin" style="width: 138px;">{{name3}}</label>
+ <mat-progress-bar
+    class = "tp-margin"
+    mode = "determinate"
+    [value] = "value3"
+    [bufferValue] = "bufferValue3"
+    style="width:239px"
+    >
+ </mat-progress-bar>
+ <label style="width:69px">566 sold</label>
+</section>
+</h5>
+
+ </div>
+
+
+
